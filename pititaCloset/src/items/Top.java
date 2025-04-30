@@ -1,3 +1,7 @@
+package items;
+
+import utils.Enums;
+
 public class Top extends ClothingItem {
     private Enums.TopType type;
     private boolean isLayerable;

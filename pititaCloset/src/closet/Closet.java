@@ -1,3 +1,6 @@
+package closet;
+import items.ClothingItem;
+
 import java.util.*;
 
 public class Closet {
@@ -27,7 +30,6 @@ public class Closet {
         ClothingItem newTop = new Top(id, name);
         items.add(newTop);
     }
-
 
     public void removeItem(ClothingItem item){
         this.items.remove(item);

@@ -1,4 +1,4 @@
-import java.util.*;
+package utils;
 
 public class Enums {
 
@@ -11,7 +11,7 @@ public class Enums {
     }
 
     public enum ClothingItemType{
-        TOP, BOTTOM, SHOES, ACCESSORY, OUTER_LAYER
+        TOP, BOTTOM, FOOTWEAR, ACCESSORY, OUTER_LAYER
     }
 
     enum TopType{

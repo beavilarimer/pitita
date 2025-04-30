@@ -1,3 +1,7 @@
+import closet.Closet;
+import items.*;
+import utils.Enums;
+
 import java.util.*;
 
 public class Outfit {
