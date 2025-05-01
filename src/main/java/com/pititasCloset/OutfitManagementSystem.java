@@ -1,7 +1,6 @@
 import closet.Closet;
 import items.*;
-import utils.Enums;
-
+import utils.*;
 import java.util.*;
 
 public class Outfit {
@@ -16,10 +15,32 @@ public class Outfit {
     private Enums.Season season;
     
     // Constructor, getters, setters
-    
-    public double calculateMatchScore() {
-        // Algorithm to determine how well items go together
+    public Outfit(String name, Top top, Bottom bottom, Footwear footwear,
+                  List<Accessory> accessories, Outerwear outerwear) {
+        this.id = IdGenerator.generatePrefixedId("OUTFIT");
+        this.name = name;
+        this.top = top;
+        this.bottom = bottom;
+        this.footwear = footwear;
+        this.accessories = accessories != null ? accessories : new ArrayList<>();
+        this.outerwear = outerwear;
     }
+
+    public double calculateMatchScore() {
+        double score = 0.0;
+
+        // Example: Match season
+        if (top.getSeason() == bottom.getSeason()) score += 10;
+        if (footwear.getSeason() == top.getSeason()) score += 5;
+
+        // Example: Simple color check (this can get more advanced later)
+        if (top.getColor().equalsIgnoreCase(bottom.getColor())) score += 3;
+
+        // Add more rules: matching tags, favorite items, etc.
+
+        return score;
+    }
+
 }
 
 public class OutfitGenerator {
@@ -40,6 +61,12 @@ public class OutfitGenerator {
     public Outfit generateOutfitAroundItem(ClothingItem item) {
         // Build outfit with a specific item as focal point
     }
+
+    // filtering logic for outfit generator
+    //    List<Top> tops = closet.getTops().stream()
+    //            .filter(item -> item.getSeason() == criteria.getSeason())
+    //            .collect(Collectors.toList());
+
 }
 
 public class OutfitCriteria {

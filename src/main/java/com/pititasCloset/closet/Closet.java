@@ -1,35 +1,39 @@
-package closet;
-import items.ClothingItem;
+package com.pititasCloset.closet;
 
+import com.pititasCloset.items.*;
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class Closet {
     private Set<ClothingItem> items;
-    private Set<String> ids;
     private Map<String, List<ClothingItem>> collections;
 
     public Closet() {
-        items = new HashSet<>();
-        ids = new HashSet<>();
-        collections = new HashMap<>();
+        this.items = new HashSet<>();
+        this.collections = new HashMap<>();
     }
 
-    public String generateId(){
-        String id;
-        do {
-            id = UUID.randomUUID().toString();
-        } while (ids.contains(id));
-
-        ids.add(id);
-        return id;
+    public void addItem(ClothingItem item) {
+        items.add(item);
     }
 
-    public void createTop(String name){
-        String id = generateId();
-        ids.add(id);
-        ClothingItem newTop = new Top(id, name);
-        items.add(newTop);
+    // Generic getter
+    public <T extends ClothingItem> List<T> getItemsByType(Class<T> clazz) {
+        return items.stream()
+                .filter(clazz::isInstance)
+                .map(clazz::cast)
+                .collect(Collectors.toList());
     }
+
+    //    public String generateId(){
+//        String id;
+//        do {
+//            id = UUID.randomUUID().toString();
+//        } while (ids.contains(id));
+//
+//        ids.add(id);
+//        return id;
+//    }
 
     public void removeItem(ClothingItem item){
         this.items.remove(item);
@@ -51,3 +55,4 @@ public class Closet {
         collections.put(name, items);
     }
 }
+

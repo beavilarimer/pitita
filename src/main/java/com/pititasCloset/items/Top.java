@@ -1,6 +1,11 @@
-package items;
+package com.pititasCloset.items;
 
-import utils.Enums;
+import com.pititasCloset.utils.ClothingItemType;
+import com.pititasCloset.utils.Season;
+import com.pititasCloset.utils.Size;
+
+import java.time.LocalDate;
+import java.util.List;
 
 public class Top extends ClothingItem {
     private Enums.TopType type;

@@ -1,5 +1,11 @@
-package items;
-import utils.*;
+package com.pititasCloset.items;
+
+import com.pititasCloset.enums.ClothingItemType;
+import com.pititasCloset.enums.Season;
+import com.pititasCloset.enums.Size;
+
+import java.time.LocalDate;
+import java.util.List;
 
 public class Accessory extends ClothingItem {
     private Enums.AccessoryType accessoryType;
