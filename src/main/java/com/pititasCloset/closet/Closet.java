@@ -7,17 +7,27 @@ import java.util.stream.Collectors;
 public class Closet {
     private Set<ClothingItem> items;
     private Map<String, List<ClothingItem>> collections;
+    private Set<String> tags;
+    private Set<Outfit> Outfits;
 
     public Closet() {
         this.items = new HashSet<>();
         this.collections = new HashMap<>();
+        this.tags = new HashSet<>();
+        this.outfits = new HashSet();
     }
 
     public void addItem(ClothingItem item) {
         items.add(item);
     }
 
-    // Generic getter
+    public void removeItem(Clothing item) {
+        items.remove(item);
+        // something so that it auto flags any collection that had that item
+        // similar for outfit
+    }
+
+    /* Generic Clothing item getter */
     public <T extends ClothingItem> List<T> getItemsByType(Class<T> clazz) {
         return items.stream()
                 .filter(clazz::isInstance)
@@ -25,25 +35,29 @@ public class Closet {
                 .collect(Collectors.toList());
     }
 
-    //    public String generateId(){
-//        String id;
-//        do {
-//            id = UUID.randomUUID().toString();
-//        } while (ids.contains(id));
-//
-//        ids.add(id);
-//        return id;
-//    }
-
-    public void removeItem(ClothingItem item){
-        this.items.remove(item);
-        // something so that it auto flags any collection that had that item
+    /* Generic random Clothing item getter */
+    public <T> T getRandomItemByType(Class<T> clazz) {
+        if (items == null || items.isEmpty()){
+            return null;
+        }
+        return getItemsByType(clazz).get(random.nextInt(items.size()));
     }
 
     public Set<ClothingItem> findByTag(String tag){
         Set <ClothingItem> taggedItems = new HashSet<>();
         for (ClothingItem item : items){
             if(item.containsTag(tag)){
+                taggedItems.add(item);
+            }
+        }
+        return taggedItems;
+    }
+
+    public Set<ClothingItem> findByTagAndType(String tag, Class<t> clazz){
+        Set <ClothingItem> taggedItems = new HashSet<>();
+        List<T> typeItems = getItemsByType(clazz);
+        for (ClothingItem item : typeItems){
+            if(item.hasTag(tag)){
                 taggedItems.add(item);
             }
         }
