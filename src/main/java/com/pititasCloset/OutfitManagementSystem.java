@@ -1,4 +1,5 @@
 import closet.Closet;
+import com.pititasCloset.items.*;
 import items.*;
 import utils.*;
 import java.util.*;
@@ -12,7 +13,7 @@ public class Outfit {
     private List<Accessory> accessories;
     private Outerwear outerwear;
     private List<String> occasions;
-    private Enums.Season season;
+    private utils.Enums.Season season;
     
     // Constructor, getters, setters
     public Outfit(String name, Top top, Bottom bottom, Footwear footwear,

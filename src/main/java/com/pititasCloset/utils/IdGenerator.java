@@ -1,9 +1,12 @@
 package com.pititasCloset.utils;
+import com.pititasCloset.items.ClothingItem;
+import utils.Enums;
+
 import java.util.*;
 
 public class IdGenerator {
 
-    Set<String> ids;
+    static Set<String> ids;
 
     // Generate a unique ID (8 characters)
     public static String generateShortId() {
@@ -11,11 +14,12 @@ public class IdGenerator {
     }
 
     // Generate a unique ID including prefix for ClothingType
-    public static String generatePrefixedId(String prefix) {
+    public static String generatePrefixedId(Enums.ClothingItemType prefix) {
+        String id;
         do {
-            id = prefix + "-" + UUID.randomUUID().toString().substring(0, 8);
-        } while (this.ids.contains(id))
-        ids.add(id)
+            id = prefix.toString() + "-" + UUID.randomUUID().toString().substring(0, 8);
+        } while (ids.contains(id));
+        ids.add(id);
         return id;
     }
 }

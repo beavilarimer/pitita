@@ -10,12 +10,12 @@ import java.util.HashMap;
 import java.util.List;
 
 public class ClothingItemFactory {
-    public static ClothingItem createItem(String name, Enums.ClothingItemType type,
+    public static ClothingItem createItem(String name, utils.Enums.ClothingItemType type,
                                           Map<String, Object> attributes) {
-        String id = IdGenerator.generatePrefixedId(type)
+        String id = IdGenerator.generatePrefixedId(type);
         return switch (type) {
             case TOP -> {
-                Enums.Size size = (Enums.Size) attributes.get("size");
+                utils.Enums.Size size = (utils.Enums.Size) attributes.get("size");
                 yield new Top(id, name);
             }
             case BOTTOM -> new Bottom(id, name);

@@ -21,7 +21,7 @@ public class Closet {
         items.add(item);
     }
 
-    public void removeItem(Clothing item) {
+    public void removeItem(ClothingItem item) {
         items.remove(item);
         // something so that it auto flags any collection that had that item
         // similar for outfit
@@ -46,17 +46,17 @@ public class Closet {
     public Set<ClothingItem> findByTag(String tag){
         Set <ClothingItem> taggedItems = new HashSet<>();
         for (ClothingItem item : items){
-            if(item.containsTag(tag)){
+            if(item.hasTag(tag)){
                 taggedItems.add(item);
             }
         }
         return taggedItems;
     }
 
-    public Set<ClothingItem> findByTagAndType(String tag, Class<t> clazz){
+    public Set<ClothingItem> findByTagAndType(String tag, Class<T> clazz){
         Set <ClothingItem> taggedItems = new HashSet<>();
         List<T> typeItems = getItemsByType(clazz);
-        for (ClothingItem item : typeItems){
+        for (<T> item : typeItems){
             if(item.hasTag(tag)){
                 taggedItems.add(item);
             }

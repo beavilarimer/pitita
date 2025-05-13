@@ -2,7 +2,7 @@ package com.pititasCloset.items;
 
 import com.pititasCloset.utils.*;
 import java.time.LocalDate;
-import java.util.List;
+import java.util.*;
 
 public abstract class ClothingItem {
     private final String id;
@@ -10,9 +10,9 @@ public abstract class ClothingItem {
     private String color;
     private String brand;
     private String material;
-    private Enums.Size size;
-    private Enums.ClothingItemType itemType;
-    private Enums.Season season;
+    private utils.Enums.Size size;
+    private utils.Enums.ClothingItemType itemType;
+    private utils.Enums.Season season;
     private LocalDate purchaseDate;
     private String imageUrl;
     private List<String> tags;
@@ -23,8 +23,8 @@ public abstract class ClothingItem {
 
     // Constructor
     public ClothingItem(String id, String name, String color, String brand, String material,
-                        Enums.Size size, Enums.ClothingItemType itemType,
-                        Enums.Season season, String imageUrl){
+                        utils.Enums.Size size, utils.Enums.ClothingItemType itemType,
+                        utils.Enums.Season season, String imageUrl){
         this.id = id;
         this.name = name;
         this.color = color;
