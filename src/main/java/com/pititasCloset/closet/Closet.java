@@ -1,5 +1,6 @@
 package com.pititasCloset.closet;
 
+import com.pititasCloset.outfit.Outfit;
 import com.pititasCloset.items.*;
 import java.util.*;
 import java.util.stream.Collectors;
@@ -8,13 +9,13 @@ public class Closet {
     private Set<ClothingItem> items;
     private Map<String, List<ClothingItem>> collections;
     private Set<String> tags;
-    private Set<Outfit> Outfits;
+    private Set<Outfit> outfits;
 
     public Closet() {
         this.items = new HashSet<>();
         this.collections = new HashMap<>();
         this.tags = new HashSet<>();
-        this.outfits = new HashSet();
+        this.outfits = new HashSet<>();
     }
 
     public void addItem(ClothingItem item) {
@@ -36,10 +37,11 @@ public class Closet {
     }
 
     /* Generic random Clothing item getter */
-    public <T> T getRandomItemByType(Class<T> clazz) {
+    public <T extends ClothingItem> T getRandomItemByType(Class<T> clazz) {
         if (items == null || items.isEmpty()){
             return null;
         }
+        Random random = new Random();
         return getItemsByType(clazz).get(random.nextInt(items.size()));
     }
 
@@ -53,10 +55,10 @@ public class Closet {
         return taggedItems;
     }
 
-    public Set<ClothingItem> findByTagAndType(String tag, Class<T> clazz){
-        Set <ClothingItem> taggedItems = new HashSet<>();
+    public <T extends ClothingItem> List<T> findByTagAndType(String tag, Class<T> clazz){
+        List<T> taggedItems = new ArrayList<>();
         List<T> typeItems = getItemsByType(clazz);
-        for (<T> item : typeItems){
+        for (T item : typeItems){
             if(item.hasTag(tag)){
                 taggedItems.add(item);
             }

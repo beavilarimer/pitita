@@ -61,6 +61,8 @@ public abstract class ClothingItem {
         return season.name();
     }
 
+    public String getColor() { return color;}
+
     public List<String> getTags(){
         return tags;
     }

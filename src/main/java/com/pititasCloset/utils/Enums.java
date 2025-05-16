@@ -14,11 +14,11 @@ public class Enums {
         TOP, BOTTOM, FOOTWEAR, ACCESSORY, OUTER_LAYER
     }
 
-    enum TopType{
+    public enum TopType{
         T_SHIRT, BLOUSE, SWEATER, TANK_TOP, BUTTON_UP, HOODIE
     }
 
-    enum BottomType{
+    public enum BottomType{
         JEANS, SKIRT, SHORTS
     }
 
