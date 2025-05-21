@@ -1,12 +1,12 @@
 package com.pititasCloset.items;
 
-import com.pititasCloset.utils.*;
+import com.pititasCloset.utils.Enums.*;
 
 import java.time.LocalDate;
 import java.util.List;
 
 public class Top extends ClothingItem {
-    private utils.Enums.TopType type;
+    private TopType type;
     private boolean isLayerable;
     private boolean buttoned;
     private String sleeveLength;

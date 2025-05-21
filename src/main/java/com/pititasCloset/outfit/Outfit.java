@@ -1,7 +1,8 @@
 package com.pititasCloset.outfit;
 
 import com.pititasCloset.items.*;
-import com.pititasCloset.utils.*;
+import com.pititasCloset.utils.Enums.*;
+import com.pititasCloset.utils.IdGenerator;
 import java.util.*;
 
 public class Outfit {
@@ -13,12 +14,12 @@ public class Outfit {
     private List<Accessory> accessories;
     // private Outerwear outerwear;
     private List<String> occasions;
-    private utils.Enums.Season season;
+    private Season season;
     
     // Constructor, getters, setters
     public Outfit(String name, Top top, Bottom bottom, Footwear footwear,
                   List<Accessory> accessories) {
-        this.id = IdGenerator.generatePrefixedId(utils.Enums.ClothingItemType.valueOf("OUTFIT"));
+        this.id = IdGenerator.generatePrefixedId(ClothingItemType.valueOf("OUTFIT"));
         this.name = name;
         this.top = top;
         this.bottom = bottom;

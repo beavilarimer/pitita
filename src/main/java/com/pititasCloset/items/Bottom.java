@@ -1,11 +1,11 @@
 package com.pititasCloset.items;
 
-import com.pititasCloset.utils.*;
+import com.pititasCloset.utils.Enums.*;
 import java.time.LocalDate;
 import java.util.List;
 
 public class Bottom extends ClothingItem {
-    private utils.Enums.BottomType type; // E.g., JEANS, SKIRT, SHORTS
+    private BottomType type; // E.g., JEANS, SKIRT, SHORTS
     private String length;
     private String fit;
 

@@ -1,6 +1,6 @@
 package com.pititasCloset.utils;
 import com.pititasCloset.items.ClothingItem;
-import utils.Enums;
+import com.pititasCloset.utils.Enums.*;
 
 import java.util.*;
 

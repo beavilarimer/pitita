@@ -8,14 +8,15 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.HashMap;
 import java.util.List;
+import com.pititasCloset.utils.Enums.*;
 
 public class ClothingItemFactory {
-    public static ClothingItem createItem(String name, utils.Enums.ClothingItemType type,
+    public static ClothingItem createItem(String name, ClothingItemType type,
                                           Map<String, Object> attributes) {
         String id = IdGenerator.generatePrefixedId(type);
         return switch (type) {
             case TOP -> {
-                utils.Enums.Size size = (utils.Enums.Size) attributes.get("size");
+                Size size = (Size) attributes.get("size");
                 yield new Top(id, name);
             }
             case BOTTOM -> new Bottom(id, name);

@@ -1,14 +1,14 @@
 package com.pititasCloset.items;
 
-import com.pititasCloset.utils.*;
+import com.pititasCloset.utils.Enums.*;
 
 import java.time.LocalDate;
 import java.util.List;
 
 public class Accessory extends ClothingItem {
-    private utils.Enums.AccessoryType accessoryType;
+    private AccessoryType accessoryType;
 
-    public Accessory(String id, String name, String color, utils.Enums.AccessoryType type,
+    public Accessory(String id, String name, String color, AccessoryType type,
                      String brand, String pattern, String size) {
         super(id, name);
         this.accessoryType = type;

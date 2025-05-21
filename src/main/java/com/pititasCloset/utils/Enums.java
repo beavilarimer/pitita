@@ -1,4 +1,4 @@
-package utils;
+package com.pititasCloset.utils;
 
 public class Enums {
 

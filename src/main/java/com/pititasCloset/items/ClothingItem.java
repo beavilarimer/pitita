@@ -1,20 +1,24 @@
 package com.pititasCloset.items;
 
-import com.pititasCloset.utils.*;
+import com.pititasCloset.utils.Enums.*;
+import lombok.Getter;
+
 import java.time.LocalDate;
 import java.util.*;
 
 public abstract class ClothingItem {
     private final String id;
     private String name;
+    @Getter
     private String color;
     private String brand;
     private String material;
-    private utils.Enums.Size size;
-    private utils.Enums.ClothingItemType itemType;
-    private utils.Enums.Season season;
+    private Size size;
+    private ClothingItemType itemType;
+    private Season season;
     private LocalDate purchaseDate;
     private String imageUrl;
+    @Getter
     private List<String> tags;
     private boolean favorite;
     private int wearCount;
@@ -23,8 +27,8 @@ public abstract class ClothingItem {
 
     // Constructor
     public ClothingItem(String id, String name, String color, String brand, String material,
-                        utils.Enums.Size size, utils.Enums.ClothingItemType itemType,
-                        utils.Enums.Season season, String imageUrl){
+                        Size size, ClothingItemType itemType,
+                        Season season, String imageUrl){
         this.id = id;
         this.name = name;
         this.color = color;
@@ -47,11 +51,6 @@ public abstract class ClothingItem {
         this.name = name;
     }
 
-    // get
-    public String getName(){
-        return name;
-    }
-
     public List<String> getBasicAttributes(){
         return Arrays.asList(itemType.name(), name, color, brand, material,
                 size.name());
@@ -59,12 +58,6 @@ public abstract class ClothingItem {
 
     public String getSeason(){
         return season.name();
-    }
-
-    public String getColor() { return color;}
-
-    public List<String> getTags(){
-        return tags;
     }
 
     public void wear(){

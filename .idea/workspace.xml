@@ -5,8 +5,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8514e4e6-a9e6-48ca-96e7-8d66d0ea3ff0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pititasCloset/api/.mvn.wrapper/maven-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pititasCloset/outfit/Outfit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pititasCloset/outfit/Outfit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pititasCloset/utils/Enums.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pititasCloset/utils/Enums.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pititasCloset/closet/Closet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pititasCloset/closet/ClothingItemFactory$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pititasCloset/closet/ClothingItemFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pititasCloset/items/Accessory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pititasCloset/items/Bottom.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pititasCloset/items/ClothingItem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pititasCloset/items/Footwear.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pititasCloset/items/Top.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pititasCloset/outfit/Outfit.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pititasCloset/outfit/OutfitCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pititasCloset/outfit/OutfitGenerator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pititasCloset/ui/ClosetApp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pititasCloset/ui/MainView.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pititasCloset/utils/IdGenerator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/utils/Enums$AccessoryType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/utils/Enums$BottomType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/utils/Enums$ClothingItemType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/utils/Enums$FootwearClosureType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/utils/Enums$FootwearType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/utils/Enums$Season.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/utils/Enums$Size.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/utils/Enums$TopType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/utils/Enums.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
